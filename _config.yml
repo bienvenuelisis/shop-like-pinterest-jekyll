@@ -1,15 +1,29 @@
 # Site
-name: 'Pintereso'
-description: 'Pintereso is a free Jekyll theme for awesome people like you, Pinterest like.'
+name: 'ACorporate Shop'
+description: 'ACorporate Shop'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: '/template-pintereso-bootstrap-jekyll'
-avatar: 'assets/images/sal.jpg'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+baseurl: 'https://bienvenuelisis.github.io/shop-like-pinterest-jekyll/'
+#baseurl: ''
+avatar: 'assets/images/me.jpg'
+disqus: 'acorporate'
+email: 'support@acorporate.fr'
 
 include: ["_pages"]
 permalink: /:title/
+
+# Authors
+authors:
+  elisis:
+    name: Bienvenu Kokou AGBAVON
+    avatar: "assets/images/me.jpg"
+    display_name: Kokou AGBAVON
+    gravatar: c9908ff7b5184aae488be00a62a75c27
+    email: elisis.author@gmail.com
+    web: https://bienvenuelisis.github.io/
+    twitter: https://twitter.com/AgbavonB
+    social: https://www.linkedin.com/in/bienvenu-agbavon/
+    description: "A Java Backend Programmer. IT Ingenior. Humanist blogger. African optimist"
 
 # Plugins
 plugins: 
