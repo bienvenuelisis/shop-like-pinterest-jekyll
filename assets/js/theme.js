@@ -28,20 +28,24 @@ function loadSearch(){
         // Stop the default action
         e.preventDefault()
  
+        performSearch();
+    })
+
+    function performSearch() {
         // Find the results from lunr
         results = idx.search($('#searchField').val())
- 
+
         // Empty #content and put a list in for the results
         $('#content').html('<h1>Search Results (' + results.length + ')</h1>')
         $('#content').append('<ul id="searchResults"></ul>')
- 
+
         // Loop through results
         $.each(results, function(index, result){
             // Get the entry from the window global
             entry = window.searchData[result.ref]
- 
+
             // Append the entry to the list.
             $('#searchResults').append('<li><a href="' + entry.url + '">' + entry.title + '</li>')
         })
-    })
+    }
 }
