@@ -13,25 +13,25 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp; prototype any iOS app for iPhone X. In Sketch file you will find 16 the most popular categories." />
 <meta property="og:description" content="UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp; prototype any iOS app for iPhone X. In Sketch file you will find 16 the most popular categories." />
-<link rel="canonical" href="http://localhost:4000/ios/" />
-<meta property="og:url" content="http://localhost:4000/ios/" />
+<link rel="canonical" href="http://localhost:4000/shop/ios/" />
+<meta property="og:url" content="http://localhost:4000/shop/ios/" />
 <meta property="og:site_name" content="ACorporate Shop" />
-<meta property="og:image" content="http://localhost:4000/assets/images/ios.jpg" />
+<meta property="og:image" content="http://localhost:4000/shop/assets/images/ios.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-01-12T00:00:00+00:00" />
 <script type="application/ld+json">
-{"headline":"UIXO iOS 11 Wireframe Kit","dateModified":"2018-01-12T00:00:00+00:00","datePublished":"2018-01-12T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ios/"},"url":"http://localhost:4000/ios/","image":"http://localhost:4000/assets/images/ios.jpg","description":"UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp; prototype any iOS app for iPhone X. In Sketch file you will find 16 the most popular categories.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"@context":"http://schema.org"}</script>
+{"headline":"UIXO iOS 11 Wireframe Kit","dateModified":"2018-01-12T00:00:00+00:00","datePublished":"2018-01-12T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shop/ios/"},"url":"http://localhost:4000/shop/ios/","image":"http://localhost:4000/shop/assets/images/ios.jpg","description":"UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp; prototype any iOS app for iPhone X. In Sketch file you will find 16 the most popular categories.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/shop/assets/images/logo.png"}},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/shop/assets/images/logo.png">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/shop/assets/css/bootstrap.css">
 
-    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/shop/assets/css/theme.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -44,15 +44,15 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <a style="width: 54px;" class="navbar-brand font-weight-bolder mr-3" href="/"><img
-            src="/assets/images/logo.png"></a>
+    <a style="width: 54px;" class="navbar-brand font-weight-bolder mr-3" href="/shop/"><img
+            src="/shop/assets/images/logo.png"></a>
     <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
             aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsDefault">
         <ul class="navbar-nav mr-auto align-items-center">
-            <script src="/assets/js/lunr.js"></script>
+            <script src="/shop/assets/js/lunr.js"></script>
 
 <script>
 $(function() {
@@ -318,7 +318,7 @@ function lunr_search(term) {
 
     document.getElementById('lunrsearchresults').innerHTML = '<div id="resultsmodal" class="modal fade show d-block"  tabindex="-1" role="dialog" aria-labelledby="resultsmodal"> <div class="modal-dialog shadow-lg" role="document"> <div class="modal-content"> <div class="modal-header" id="modtit"> <button type="button" class="close" id="btnx" data-dismiss="modal" aria-label="Fermer"> &times; </button> </div> <div class="modal-body"> <ul class="mb-0"> </ul>    </div> <div class="modal-footer"><button id="btnx" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fermer</button></div></div> </div></div>';
     if(term) {
-        document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Résultats de recherche pour '" + term + " :'</h5>" + document.getElementById('modtit').innerHTML;
+        document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Résultats de recherche pour '" + term + "' : </h5>" + document.getElementById('modtit').innerHTML;
         //put results on the screen.
         var results = idx.search(term);
         if(results.length>0){
@@ -330,7 +330,7 @@ function lunr_search(term) {
                 var url = documents[ref]['url'];
                 var title = documents[ref]['title'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ "" + url +"</span></small></a></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ "/shop" + url +"</span></small></a></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>Désolé, aucun résultat trouvé. Fermez et essayez une autre recherche !</li>";
@@ -361,21 +361,21 @@ function lunr_search(term) {
 
 <li class="nav-item">
     
-    <a class="nav-link" href="/">Accueil</a>
+    <a class="nav-link" href="/shop/">Accueil</a>
 </li>
 
 <li class="nav-item">
     
-    <a class="nav-link" href="/categories.html">Catégories</a>
+    <a class="nav-link" href="/shop/categories.html">Catégories</a>
 </li>
 
 <li class="nav-item">
     
-    <a class="nav-link" href="/contact.html">Contact</a>
+    <a class="nav-link" href="/shop/contact.html">Contact</a>
 </li>
 <li class="nav-item">
     <a class="nav-link" target="_blank" href="https://bienvenuelisis.github.io">
-        <img class="rounded-circle mr-2" src="/assets/images/me.jpg" width="30"><span class="align-middle"></span></a>
+        <img class="rounded-circle mr-2" src="/shop/assets/images/me.jpg" width="30"><span class="align-middle"></span></a>
 </li>
 <li class="nav-item">
     <a class="nav-link"target="_blank" href="https://acorporate.fr">by ACorporate</a>
@@ -399,7 +399,7 @@ function lunr_search(term) {
                     
                     <span class="pinme">
                         <a data-pin-do="buttonPin" data-pin-tall="true"
-                           href="https://www.pinterest.com/pin/create/button/?url=http://localhost:4000/ios/&media=http://localhost:4000//assets/images/ios.jpg&description=UIXO iOS 11 Wireframe Kit- UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp;..."></a>
+                           href="https://www.pinterest.com/pin/create/button/?url=http://localhost:4000/shop/ios/&media=http://localhost:4000/shop//assets/images/ios.jpg&description=UIXO iOS 11 Wireframe Kit- UIXO is a collection of 105 beautiful wireframes of iOS 11 screens for iPhone X. UIXO iOS 11 Wireframes will help you to start &amp;..."></a>
                     </span>
                     <img class="card-img-top mb-2" src="//assets/images/ios.jpg" alt="UIXO iOS 11 Wireframe Kit">
                     
@@ -426,17 +426,17 @@ function lunr_search(term) {
 
                         
                         <a class="btn btn-sm btn-primary mt-2"
-                           href="/categories.html#ui">
+                           href="/shop/categories.html#ui">
                             # ui
                         </a>
                         
                         <a class="btn btn-sm btn-primary mt-2"
-                           href="/categories.html#premium">
+                           href="/shop/categories.html#premium">
                             # premium
                         </a>
                         
                         <a class="btn btn-sm btn-primary mt-2"
-                           href="/categories.html#graphics">
+                           href="/shop/categories.html#graphics">
                             # graphics
                         </a>
                         
@@ -466,10 +466,10 @@ function lunr_search(term) {
 
                 <div class="PageNavigation">
                     
-                    <a class="prev" href="/mediumish-jekyll/"><i class="fa fa-angle-left"></i> </a>
+                    <a class="prev" href="/shop/mediumish-jekyll/"><i class="fa fa-angle-left"></i> </a>
                     
                     
-                    <a class="next" href="/graphic-bundle/"><i class="fa fa-angle-right"></i></a>
+                    <a class="next" href="/shop/graphic-bundle/"><i class="fa fa-angle-right"></i></a>
                     
                 </div>
 
@@ -515,11 +515,11 @@ function lunr_search(term) {
 </p>
 
 <p>
-    <a class="text-muted" href="shop.acorporate.fr">
+    <a class="text-muted" href="#!">
         &copy;  ACorporate Shop. 
     </a>
     
-    <a class="text-muted" href="/privacy-policy.html">
+    <a target="_blank" class="text-muted" href="/privacy-policy.html">
         Politique de confidentialité.
     </a>
     
@@ -536,8 +536,8 @@ function lunr_search(term) {
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
-<script src="/assets/js/theme.js"></script>
-<script src="/assets/js/lunr.js"></script>
+<script src="/shop/assets/js/theme.js"></script>
+<script src="/shop/assets/js/lunr.js"></script>
 <!-- All this area goes before </body> closing tag --> 
 
 
@@ -569,7 +569,7 @@ window.cookieconsent.initialise({
           "le meilleur service possible.",
       "dismiss":"J'ai compris",
       "link":"En apprendre plus.",
-    "href": "http://localhost:4000/privacy-policy.html"
+    "href": "http://localhost:4000/shop/privacy-policy.html"
   }
 })});
 </script>

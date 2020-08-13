@@ -30,7 +30,7 @@ description: "Achetez facilement et rapidement."
             {% if paginator.total_pages > 1 %}
             <div class="pagination">
                 {% if paginator.previous_page %}
-                <a href="/{{ paginator.previous_page_path }}">&laquo;
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;
                     Précédent</a>
                 {% else %}
                 <span class="prev">&laquo; Précédent</span>
@@ -42,13 +42,13 @@ description: "Achetez facilement et rapidement."
                 {% elsif page == 1 %}
                 <a href="{{site.baseurl}}/">{{ page }}</a>
                 {% else %}
-                <a href="/{{ site.paginate_path }}">{{
+                <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{
                     page }}</a>
                 {% endif %}
                 {% endfor %}
 
                 {% if paginator.next_page %}
-                <a href="/{{ paginator.next_page_path }}">Suivant &raquo;</a>
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Suivant &raquo;</a>
                 {% else %}
                 <span class="next">Suivant &raquo;</span>
                 {% endif %}
