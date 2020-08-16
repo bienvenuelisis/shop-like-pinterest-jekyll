@@ -18,12 +18,9 @@ description: "Achetez facilement et rapidement."
         <h1 class="font-weight-bold title">Tous nos produits</h1>
     </div>
 
-    <div class="container">
-        <div class="card-columns">
-            {% for post in paginator.posts reversed %}
-            {% include card-post.html %}
-            {% endfor %}
-        </div>
+    <div class="container-fluid">
+
+        {% include all-products.html %}
 
         <div class="row justify-content-center mt-5">
             <!-- Pagination links -->

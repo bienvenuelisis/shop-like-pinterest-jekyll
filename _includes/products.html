@@ -1,0 +1,10 @@
+<div class="row">
+    {% for post in paginator.posts reversed %}
+
+    <div class="col-4">
+        {% include card-post.html %}
+    </div>
+
+    {% endfor %}
+
+</div>

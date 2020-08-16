@@ -1,0 +1,69 @@
+<div data-url="{{site.baseurl}}{{post.url}}"
+     id="product-{{ post.identifier }}" class="card card-product">
+    <div class="card-product-img-container">
+        {% if site.lazyimages == "enabled" %}
+        <img id="img-product-lazy-{{ post.identifier }}"
+             class="card-img lazyimg" href="{{site.baseurl}}{{post.url}}"
+             src="{{site.baseurl}}/{{ post.image }}"
+             alt="{{ post.title }}">
+        {% else %}
+        <img id="img-product-{{ post.identifier }}"
+             class="card-img" href="{{site.baseurl}}{{post.url}}"
+             src="{{site.baseurl}}/{{ post.image }}"
+             alt="{{ post.title }}">
+        {% endif %}
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">{{ post.title }} :
+            <a class="underlined" href="{{site.baseurl}}{{post.url}}">
+                Consulter
+                <i style="color: white;" class="fa fa-external-link-alt"></i></a></h4>
+        <div class="card-more-info">
+            <div class="date-added-product">
+                <p class="card-text">
+                    <small class="text-muted">
+                        Ajouté le
+                        <!-- Whitespace added for readability -->
+                        {% assign m = post.date | date: "%-m" %}
+                        {{ post.date | date: "%-d" }}
+                        {% case m %}
+                        {% when '1' %}Janvier
+                        {% when '2' %}Février
+                        {% when '3' %}Mars
+                        {% when '4' %}Avril
+                        {% when '5' %}Mai
+                        {% when '6' %}Juin
+                        {% when '7' %}Juillet
+                        {% when '8' %}Aoùt
+                        {% when '9' %}Septembre
+                        {% when '10' %}Octobre
+                        {% when '11' %}Novembre
+                        {% when '12' %}Décembre
+                        {% endcase %}
+                        {{ post.date | date: "%Y" }}
+                    </small>
+                </p>
+            </div>
+            <div class="product-price">{{ post.price }} FCFA</div>
+        </div>
+        <div class="card-product-actions">
+            <a data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
+               href="#!" class="float shareArticle">
+                <i data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
+                   class="my-float fa fa-share-alt fa-2x shareArticle">
+                </i>
+            </a>
+
+            {% if post.contact %}
+            <a href="tel:{{ post.contact }}" class="go-to-product">
+                <i class="go-to-product-fa-icon fa fa-phone fa-2x"></i>
+            </a>
+            {% else %}
+            <a href="tel:{{ site.contact }}" class="go-to-product">
+                <i class="go-to-product-fa-icon fa fa-phone fa-2x"></i>
+            </a>
+            {% endif %}
+
+        </div>
+    </div>
+</div>

@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/cards-products-gn.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -74,10 +76,73 @@
 
 <script src="{{site.baseurl}}/assets/js/theme.js"></script>
 <script src="{{site.baseurl}}/assets/js/lunr.js"></script>
+<script src="{{site.baseurl}}/assets/js/lazyload.js"></script>
+<script src="{{site.baseurl}}/assets/js/color.js"></script>
+
 {% include tracking-footer.html %}
 <script id="dsq-count-scr" src="//acorporate.disqus.com/count.js" async></script>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript"
         src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f33445a0c0a142a"></script>
+<script type="application/javascript">
+    $(document).ready(function () {
+        function shares() {
+            const shareArticleBtn = $('.shareArticle');
+            shareArticleBtn.click(function (e) {
+                e.preventDefault();
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'ACorporate Shop : ' + $(this).data('title'),
+                        text: '',
+                        url: $(this).data('url')
+                    }).then(function (e) {
+                    }).catch(console.error);
+                } else {
+                    let url = 'whatsapp://send?text=ACorporate Shop : ' + $(this).data('title') + '.'
+                        + '                          ' + $(this).data('url');
+                    //window.location.href = url;
+                    window.open(url, '_blank');
+                }
+            });
+        }
+
+        function colors() {
+            const cards = $('.card-product');
+            cards.each(function (index, el) {
+                    let card = $(el);
+                    let id = card.find('img').attr('id');
+                    const colorThief = new ColorThief();
+                    const img = document.querySelector('#' + id);
+                    if (img.complete) {
+                        let colorRGb = colorThief.getColor(img);
+                        card.css('background', 'linear-gradient(-5deg, black 10%, ' +
+                            'rgb(' + colorRGb[0] + ', ' + colorRGb[1] + ', ' + colorRGb[2] + ')' + ' 25%)');
+                    } else {
+                        img.addEventListener('load', function () {
+                            let colorRGb = colorThief.getColor(img);
+                            card.css('background', 'linear-gradient(-5deg, black 10%, ' +
+                                'rgb(' + colorRGb[0] + ', ' + colorRGb[1] + ', ' + colorRGb[2] + ')' + ' 25%)');
+                        });
+                    }
+                }
+            )
+        }
+
+        function carsLinks() {
+            const cards = $('.card-product');
+            cards.click(function (e) {
+                window.location.href = $(this).data('url')
+            })
+        }
+
+        function initShop() {
+            shares();
+            colors();
+            carsLinks();
+        }
+
+        initShop();
+    })
+</script>
 </body>
 </html>
