@@ -9,10 +9,6 @@ layout: default
                 <article class="card">
 
                     {% if page.image %}
-                    <span class="pinme">
-                        <a data-pin-do="buttonPin" data-pin-tall="true"
-                           href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{site.baseurl}}{{page.url}}&media={{site.url}}{{site.baseurl}}/{{page.image}}&description={{ page.title }}- {{ page.content | strip_html | truncatewords:25 }}"></a>
-                    </span>
                     <img class="card-img-top mb-2" src="{{site.baseurl}}/{{ page.image }}" alt="{{ page.title }}">
                     {% endif %}
 
@@ -33,11 +29,24 @@ layout: default
 
                         {{ content }}
 
-                        {% if page.visit %}
-                        <p><a target="_blank" href="{{page.visit}}" class="btn btn-gray d-block font-weight-bold">
-                            Visit <i class="fas fa-external-link-alt"></i></a>
+                        <p>
+                            {% if post.contact %}
+                            <a target="_blank" href="tel:{{ post.contact }}"
+                               class="btn btn-gray d-block font-weight-bold">
+                                Contacter le vendeur <i class="fas fa-phone"></i></a>
+                            {% else %}
+                            <a target="_blank" href="tel:{{ site.contact }}"
+                               class="btn btn-gray d-block font-weight-bold">
+                                Contacter le vendeur <i class="fas fa-phone"></i></a>
+                            {% endif %}
+
+                            <a data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
+                               data-price="{{ post.price }}" href="#!" target="_blank"
+                               class="btn btn-success d-block font-weight-bold shareArticle">
+                                Partagez
+                                <i data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
+                                   data-price="{{ post.price }}" class="fas fa-share-alt"></i></a>
                         </p>
-                        {% endif %}
 
                         {% for category in page.categories %}
                         <a class="btn btn-sm btn-primary mt-2"

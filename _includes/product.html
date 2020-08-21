@@ -1,4 +1,5 @@
-<div data-url="{{site.baseurl}}{{post.url}}"
+<div data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
+     data-price="{{ post.price }}"
      id="product-{{ post.identifier }}" class="card card-product">
     <div class="card-product-img-container">
         {% if site.lazyimages == "enabled" %}
@@ -48,9 +49,9 @@
         </div>
         <div class="card-product-actions">
             <a data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
-               href="#!" class="float shareArticle">
+               data-price="{{ post.price }}" href="#!" class="float shareArticle">
                 <i data-url="{{site.baseurl}}{{post.url}}" data-title="{{ post.title }}"
-                   class="my-float fa fa-share-alt fa-2x shareArticle">
+                   data-price="{{ post.price }}" class="my-float fa fa-share-alt fa-2x shareArticle">
                 </i>
             </a>
 

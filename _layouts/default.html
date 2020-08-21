@@ -93,12 +93,13 @@
                 if (navigator.share) {
                     navigator.share({
                         title: 'ACorporate Shop : ' + $(this).data('title'),
-                        text: '',
+                        text: $(this).data('title') + '\n Prix : ' + $(this).data('price'),
                         url: $(this).data('url')
                     }).then(function (e) {
                     }).catch(console.error);
                 } else {
-                    let url = 'whatsapp://send?text=ACorporate Shop : ' + $(this).data('title') + '.'
+                    let url = 'https://web.whatsapp.com/send?text=ACorporate Shop : ' + $(this).data('title') + '.'
+                        + '                          ' + $(this).data('price')
                         + '                          ' + $(this).data('url');
                     //window.location.href = url;
                     window.open(url, '_blank');
