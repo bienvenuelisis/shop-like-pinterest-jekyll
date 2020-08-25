@@ -12,10 +12,12 @@ layout: default
                     <img class="card-img-top mb-2" src="{{site.baseurl}}/{{ page.image }}" alt="{{ page.title }}">
                     {% endif %}
 
+                    {% if page.images %}
                     <a href="#!" role="button" id="showGalleryFromArray"
                        class="btn btn-danger d-block font-weight-bold">
                         Voir toutes les images <i class="fa fa-img"></i></a>
-
+                    {% endif %}
+                    
                     <div class="card-body">
 
                         <h1 class="display-4">
