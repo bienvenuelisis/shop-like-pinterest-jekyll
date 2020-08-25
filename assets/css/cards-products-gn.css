@@ -79,52 +79,6 @@
 .card-body {
 }
 
-.go-to-product {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 50px;
-    left: 1px;
-    background-color: #608dd4;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
-}
-
-.go-to-product-fa-icon {
-    margin-top: 25%;
-}
-
-.go-to-product:before {
-
-}
-
-.go-to-product:hover:before {
-
-}
-
-.float {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 50px;
-    right: 1px;
-    background-color: #0C9;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
-}
-
-.my-float {
-    margin-top: 25%;
-}
-
-.my-float:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
 .product-price {
     position: absolute;
     font-weight: bolder;
@@ -146,6 +100,53 @@
         margin: 0;
         max-width: 95%;
     }
+
+
+    .go-to-product {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: 75px;
+        left: 1px;
+        background-color: #608dd4;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .go-to-product-fa-icon {
+        margin-top: 25%;
+    }
+
+    .go-to-product:before {
+
+    }
+
+    .go-to-product:hover:before {
+
+    }
+
+    .float {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: 75px;
+        right: 1px;
+        background-color: #0C9;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float {
+        margin-top: 25%;
+    }
+
+    .my-float:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
 }
 
 @media (min-width: 761px) {
@@ -153,6 +154,52 @@
         left: 45%;
         font-size: 18px;
         letter-spacing: 2px;
+    }
+
+    .go-to-product {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: 50px;
+        left: 1px;
+        background-color: #608dd4;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .go-to-product-fa-icon {
+        margin-top: 25%;
+    }
+
+    .go-to-product:before {
+
+    }
+
+    .go-to-product:hover:before {
+
+    }
+
+    .float {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: 50px;
+        right: 1px;
+        background-color: #0C9;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float {
+        margin-top: 25%;
+    }
+
+    .my-float:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
 }
 

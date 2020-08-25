@@ -46,6 +46,8 @@
 
     <link rel="stylesheet" href="/assets/css/cards-products-gn.css">
 
+    <link rel="stylesheet" href="/assets/css/simpleLightbox.min.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -108,41 +110,46 @@ var documents = [{
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
     "id": 6,
+    "url": "/Toyota-4-Runner/",
+    "title": "Toyota 4 Runner",
+    "body": "2020/08/25 - Moteur VVTI V6 Essence Boite Automatique Climatisation d’origine Aucune panne Tous les papiers en règles Prix à débattre "
+    }, {
+    "id": 7,
     "url": "/Toyota-RAV4/",
     "title": "Toyota RAV4",
     "body": "2020/08/20 - Boite Automatique Moteur 4 cylindres Essence VVTI Climatisation d’origine Place 5 Portes 4 Série AV Intérieur cuir propre Jantes aluminium "
     }, {
-    "id": 7,
+    "id": 8,
     "url": "/Toyota-RAV4-2/",
     "title": "Toyota RAV4",
     "body": "2020/08/20 - Boite Automatique Moteur 4 cylindres Essence Climatisation d’origine 5 Places 4 Portes Série AU Intérieur propre "
     }, {
-    "id": 8,
+    "id": 9,
     "url": "/Opel-Decapotable/",
     "title": "OPEL Décapotable",
     "body": "2020/08/20 - Nouveau Moteur Essence Manuelle Climation d’origine, mais à revoir Ouffeur et écran installé. Prix légèrement négociable "
     }, {
-    "id": 9,
+    "id": 10,
     "url": "/Kia-Picanto/",
     "title": "Kia Picanto",
     "body": "2020/08/20 - Plaque BC Manuelle Essence Jantes Aluminium Tout a jour Climatisation d’origine "
     }, {
-    "id": 10,
+    "id": 11,
     "url": "/Hyundai-Tucson/",
     "title": "Hyundai Tucson",
     "body": "2020/08/20 - 4 cylindres Essence Climatisation d’origine "
     }, {
-    "id": 11,
+    "id": 12,
     "url": "/Hyundai-Tucson-2/",
     "title": "Hyundai Tucson",
     "body": "2020/08/20 - 4 cylindres Essence Climatisation d’origine "
     }, {
-    "id": 12,
+    "id": 13,
     "url": "/BMW/",
     "title": "BMW",
     "body": "2020/08/20 - 6 cylindres Essence Automatique Clim d’origine Intérieure cuir "
     }, {
-    "id": 13,
+    "id": 14,
     "url": "/BMW-X3/",
     "title": "BMW X3",
     "body": "2020/08/20 - Automatique Essence Climatisation d’origine 6 cylindres Plaque AS "
@@ -366,6 +373,7 @@ function lunr_search(term) {
 <script src="/assets/js/lunr.js"></script>
 <script src="/assets/js/lazyload.js"></script>
 <script src="/assets/js/color.js"></script>
+<script src="/assets/js/simpleLightbox.min.js"></script>
 
 <!-- All this area goes before </body> closing tag --> 
 
@@ -406,6 +414,8 @@ window.cookieconsent.initialise({
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript"
         src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f33445a0c0a142a"></script>
+
+
 <script type="application/javascript">
     $(document).ready(function () {
         function shares() {
