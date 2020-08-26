@@ -3,7 +3,6 @@ identifier:  "Hyundai-Tucson-2011-08-20-2020"
 title:  "Hyundai Tucson"
 metadate: "hide"
 categories: [ Voitures ]
-images: [ "" ]
 price: 4.500.000
 year: 2011
 image: "assets/shop/cars/Hyundai-Tucson-2011-08-20-2020.jpeg"

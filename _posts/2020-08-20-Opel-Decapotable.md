@@ -9,6 +9,7 @@ year: 2001-2002
 image: "assets/shop/cars/Opel-Decapotable-2001-2002-08-20-2020.jpeg"
 layout: post
 comments: true
+contact: 0022891831356
 # other options
 ---
 
